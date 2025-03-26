@@ -35,7 +35,7 @@ sudo apt install -y \
 
 🚀 Usage
 ```bash
-python3 video-viewerPi.py <input_uri> [output_uri] [options]
+python3 video-viewerPi.py <input_uri> <output_uri> [options]
 ```
 
 📥 Input URI examples
@@ -48,7 +48,7 @@ File	video.mp4	Video file input
 📤 Output URI examples
 Type	Example	Description
 Local	local (default)	Display video locally
-RTP stream	rtp://192.168.4.3:1234	Stream output via RTP
+RTP stream	rtp://<remote-IP>:1234	Stream output via RTP
 File save	save://output.mp4	Save to an MP4 file
 
 ⚙️ Options
