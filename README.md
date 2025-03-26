@@ -1,16 +1,13 @@
-📹 video-viewerPi
+📹 video-viewerPi  
 video-viewerPi is a lightweight, headless video pipeline application for Raspberry Pi, NVIDIA Jetson, and Linux systems. It uses GStreamer to route and process video from various input sources (USB, CSI, RTP, or file) and outputs it to screen, RTP stream, or saved file.
 
-🔧 Features
-🎥 Supports multiple input types: USB webcam, CSI camera, RTP stream, or video file
+🔧 Features  
+🎥 Supports multiple input types: USB webcam, CSI camera, RTP stream, or video file  
+📤 Flexible output: Local display, RTP stream, or saved video  
+⚙️ Hardware-accelerated encoding (Jetson / Raspberry Pi)  
+💻 Headless CLI usage — perfect for embedded systems  
 
-📤 Flexible output: Local display, RTP stream, or saved video
-
-⚙️ Hardware-accelerated encoding (Jetson / Raspberry Pi)
-
-💻 Headless CLI usage — perfect for embedded systems
-
-📦 Installation
+📦 Installation  
 Run the included setup script:
 
 ```bash
@@ -35,32 +32,29 @@ sudo apt install -y \
 
 🚀 Usage
 ```bash
-python3 video-viewerPi.py <input_uri> <output_uri> [options]
+python3 video-viewerPi.py <input_uri> <output_uri> <options>
 ```
 
-📥 Input URI examples
-Type	Example	Description
-USB camera	/dev/video0	Standard webcam
-CSI camera	csi://0	Raspberry Pi or Jetson cam
-RTP stream	rtp://@:5000	RTP input on port 5000
-File	video.mp4	Video file input
+📥 Input URI examples   
+USB camera:-	/dev/video0	Standard webcam  
+CSI camera:-	csi://0	Raspberry Pi or Jetson cam  
+RTP stream:-	rtp://@:5000	RTP input on port 5000  
+File:-	video.mp4	Video file input  
 
-📤 Output URI examples
-Type	Example	Description
-Local	local (default)	Display video locally
-RTP stream	rtp://<remote-IP>:1234	Stream output via RTP
-File save	save://output.mp4	Save to an MP4 file
+📤 Output URI examples  
+Local:-	local (default)	Display video locally  
+RTP stream:-	rtp://[remote-IP]:1234	Stream output via RTP  
+File save:-	save://output.mp4	Save to an MP4 file  
 
-⚙️ Options
-Option	Description
---input-codec	h264 or mjpeg (default: h264, for RTP input only)
---output-codec	h264 or mjpeg (default: h264)
---hw-encoder	Enable hardware-accelerated H.264 encoding
+⚙️ Options  
+--input-codec=h264 or mjpeg (default: h264, for RTP input only)  
+--output-codec=h264 or mjpeg (default: h264)  
+--hw-encoder	Enable hardware-accelerated H.264 encoding  
 
-📂 Examples
-Stream USB camera to another device via RTP
+📂 Examples  
+View USB camera output locally
 ```bash
-python3 video-viewerPi.py /dev/video0 rtp://192.168.4.3:5000
+python3 video-viewerPi.py /dev/video0
 ```
 
 View CSI camera output locally
@@ -73,9 +67,19 @@ Save video file to disk
 python3 video-viewerPi.py /dev/video0 save://output.mp4
 ```
 
-Receive and display incoming RTP stream
+Stream USB camera to another device via RTP  
+```bash
+python3 video-viewerPi.py /dev/video0 rtp://<remote-ip>:5000
+```
+
+Receive and display incoming RTP stream  
 ```bash
 python3 video-viewerPi.py rtp://@:5000
+```
+
+Stream USB camera to another device via RTP uses mjpeg codec & GPU  
+```bash
+python3 video-viewerPi.py /dev/video0 rtp://<remote-ip>:5000 --input-codec=mjpeg --output-codec=mjpeg --hw-encoder
 ```
 
 📌 Notes
