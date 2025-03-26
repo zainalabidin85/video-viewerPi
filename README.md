@@ -15,7 +15,8 @@ Run the included setup script:
 
 ```bash
 chmod +x setup.sh
-./setup.sh```
+./setup.sh
+```
 
 Alternatively, manually install the required packages:
 
@@ -29,11 +30,13 @@ sudo apt install -y \
   gstreamer1.0-plugins-ugly \
   gstreamer1.0-libav \
   python3-gi \
-  python3-gst-1.0```
+  python3-gst-1.0 
+```
 
 🚀 Usage
 ```bash
-python3 video-viewerPi.py <input_uri> [output_uri] [options]```
+python3 video-viewerPi.py <input_uri> [output_uri] [options]
+```
 
 📥 Input URI examples
 Type	Example	Description
@@ -57,19 +60,23 @@ Option	Description
 📂 Examples
 Stream USB camera to another device via RTP
 ```bash
-python3 video-viewerPi.py /dev/video0 rtp://192.168.4.3:5000```
+python3 video-viewerPi.py /dev/video0 rtp://192.168.4.3:5000
+```
 
 View CSI camera output locally
 ```bash
-python3 video-viewerPi.py csi://0```
+python3 video-viewerPi.py csi://0
+```
 
 Save video file to disk
 ```bash
-python3 video-viewerPi.py /dev/video0 save://output.mp4```
+python3 video-viewerPi.py /dev/video0 save://output.mp4
+```
 
 Receive and display incoming RTP stream
 ```bash
-python3 video-viewerPi.py rtp://@:5000```
+python3 video-viewerPi.py rtp://@:5000
+```
 
 📌 Notes
 Hardware encoder is available for Jetson (nvh264enc) and Raspberry Pi (v4l2h264enc)
