@@ -1,0 +1,19 @@
+Copyright (c) 2025 Zainal Abidin Arsat
+All rights reserved.
+
+The video-viewerPi project and its source code are protected by copyright law 
+and international treaties. The copyright holder retains full ownership of the 
+original work, including all source files, documentation, and associated 
+materials.
+
+This software is licensed under the MIT License. You may use, copy, modify, 
+merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+subject to the terms and conditions outlined in the LICENSE file.
+
+Any copies or substantial portions of the Software must include:
+1. This copyright notice.
+2. The full MIT License text from the LICENSE file.
+
+The Software is provided "AS IS", without warranty of any kind, express or 
+implied, including but not limited to the warranties of merchantability, 
+fitness for a particular purpose, and noninfringement.
