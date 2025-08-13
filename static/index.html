@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Viewer Pi</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #0ff;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    img#video {
+      width: 100%;
+      height: auto;
+      border: 3px solid #0ff;
+      border-radius: 8px;
+    }
+    .controls {
+      margin-top: 20px;
+    }
+    select {
+      padding: 5px 10px;
+      font-size: 1em;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Video Viewer Pi</h1>
+<main>
+  <div class="video-container">
+    <img id="video" src="/stream" alt="Live Stream"/>
+  </div>
+<main>
+</body>
+</html>
